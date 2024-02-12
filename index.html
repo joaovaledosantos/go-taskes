@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/modal.css">
     <!--FONTS-->
     <link rel="preconect" href="https://fonts.googleapis.com">
     <link rel="preconect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,16 +41,7 @@
             <th>Ações</th>
         </tr>
         </thead>
-        <tbody id="table">
-        <tr>
-            <td>Estudar HTML</td>
-            <td>16/02/2024</td>
-            <td>
-                <a href="#"></a>
-                <i class="fas fa-trash"></i>
-            </td>
-        </tr>
-        </tbody>
+        <tbody id="table"></tbody>
     </table>
 
     <h3 id="loading-message">Carregando...</h3>
@@ -75,22 +67,22 @@
                             id="date"
                     >
                 </div>
+            </form>
 
-                <div class="button-modal">
-                    <button
-                         class="btn-cancel"
-                         type="button"
-                         onclick="">
-                        Cancelar
-                    </button>
-                    <button
+            <div class="button-modal">
+                <button
+                        class="btn-cancel"
+                        type="button"
+                        onclick="">
+                    Cancelar
+                </button>
+                <button
                         class="btn-save"
                         type="submit"
-                        >
-                        Salvar
-                    </button>
-                </div>
-            </form>
+                >
+                    Salvar
+                </button>
+            </div>
         </article>
     </div>
 </main>
