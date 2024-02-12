@@ -27,7 +27,7 @@
 
 <main class="container">
     <header class="main-header">
-        <button class="btn-new-task">Nova tarefa</button>
+        <button class="btn-new-task" onclick="openModal()">Nova tarefa</button>
         <span class="total-tesks">
             <span id="count-tasks">0</span> tarefas registradas
         </span>
@@ -41,7 +41,7 @@
             <th>Ações</th>
         </tr>
         </thead>
-        <tbody id="table"></tbody>
+        <tbody id="table-body"></tbody>
     </table>
 
     <h3 id="loading-message">Carregando...</h3>
@@ -52,11 +52,11 @@
 
             <form id="form">
                 <div class="form-group">
-                    <label for="description">Descrição da tarefa</label>
+                    <label for="Description">Descrição da tarefa</label>
                     <input
                             type="text"
                             placeholder="Descrição"
-                            id="description"
+                            id="Description"
                     >
                 </div>
 
@@ -73,12 +73,13 @@
                 <button
                         class="btn-cancel"
                         type="button"
-                        onclick="">
+                        onclick="closeModal()">
                     Cancelar
                 </button>
                 <button
                         class="btn-save"
                         type="submit"
+                        id="btn-create-task"
                 >
                     Salvar
                 </button>
@@ -91,5 +92,6 @@
     <p>GoTasks, 2024.</p>
 </footer>
 
+<script src="./js/script.js"></script>
 </body>
 </html>
