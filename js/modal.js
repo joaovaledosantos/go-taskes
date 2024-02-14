@@ -23,8 +23,9 @@ function CreateTask(e) {
     console.log('ALL TASKS: ', allTasks);
 
 
-    localStorage.setItem('@GoTasks', JSON.stringify([ ...allTasks, newTask ]));
+    setTasks([ ...allTasks, newTask]);
 
+    reload();
     toggleModal();
     clearFields();
 }
