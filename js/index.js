@@ -9,6 +9,7 @@ function updateCountTasks() {
 
 function fillTable() {
     const allTasks = getTasks();
+    allTasks.forEach(addTask);
 
     if (allTasks.length === 0) {
         loadingMessage.innerHTML = "Você não tem nenhuma tarefa!";
@@ -17,15 +18,25 @@ function fillTable() {
     }
 
      updateCountTasks();
+}
 
+function addTask(task) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = innerHTMLTasks(task);
+
+  table.appendChild(tr);
 }
 
 function innerHTMLTasks(task) {
     const html = `
-     <td>$(task.description)</td>
-     <td>$(task.date)</td>
-     <td>Ações</td>
-    `
+     <td>${task.description}</td>
+     <td>${task.Date}</td>
+     <td>
+     <a href="#" onclick="">
+       <i class="fa-solid fa-trash"></i>
+     </a>
+     </td>
+    `;
 
     return html;
 }
